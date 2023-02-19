@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="sidebar">
+        <ul class="nav">
+          <li class="nav-element">
+            <div class="logo-container">
+              <svg
+                class="logo-img"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <title>book-open-page-variant-outline</title>
+                <path
+                  d="M19 1L14 6V17L19 12.5V1M21 5V18.5C19.9 18.15 18.7 18 17.5 18C15.8 18 13.35 18.65 12 19.5V6C10.55 4.9 8.45 4.5 6.5 4.5C4.55 4.5 2.45 4.9 1 6V20.65C1 20.9 1.25 21.15 1.5 21.15C1.6 21.15 1.65 21.1 1.75 21.1C3.1 20.45 5.05 20 6.5 20C8.45 20 10.55 20.4 12 21.5C13.35 20.65 15.8 20 17.5 20C19.15 20 20.85 20.3 22.25 21.05C22.35 21.1 22.4 21.1 22.5 21.1C22.75 21.1 23 20.85 23 20.6V6C22.4 5.55 21.75 5.25 21 5M10 18.41C8.75 18.09 7.5 18 6.5 18C5.44 18 4.18 18.19 3 18.5V7.13C3.91 6.73 5.14 6.5 6.5 6.5C7.86 6.5 9.09 6.73 10 7.13V18.41Z"
+                />
+              </svg>
+              <p class="logo-text">Book Buddy</p>
+            </div>
+          </li>
+          <!---
+          <li class="nav-element your-library-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>library-shelves</title>
+              <path
+                d="M19.5,9V1.5H16.5V9H13.5V1.5H10.5V9H7.5V1.5H4.65V9H3V10.5H21V9H19.5M19.5,13.5H16.5V21H13.5V13.5H10.5V21H7.5V13.5H4.65V21H3V22.5H21V21H19.5V13.5Z"
+              />
+            </svg>
+            <p class="nav-element-text-library">Your Library</p>
+          </li>
+
+          <li class="nav-element have-read-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>checkbox-multiple-marked</title>
+              <path
+                d="M22,16A2,2 0 0,1 20,18H8C6.89,18 6,17.1 6,16V4C6,2.89 6.89,2 8,2H20A2,2 0 0,1 22,4V16M16,20V22H4A2,2 0 0,1 2,20V7H4V20H16M13,14L20,7L18.59,5.59L13,11.17L9.91,8.09L8.5,9.5L13,14Z"
+              />
+            </svg>
+            <p class="nav-element-text-read">Finished Books</p>
+          </li>
+          <--------------------------------------->
+          <li class="nav-element add-book-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <title>plus-circle-outline</title>
+              <path
+                d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z"
+              />
+            </svg>
+            <p class="nav-element-text-add-book">Add Book</p>
+          </li>
+        </ul>
+      </div>
+      <div class="main-content">
+        <div class="form-container">
+          <div class="close-form">
+            <p id="close-form-button">X</p>
+          </div>
+          <form action="#" id="book-form" method="get">
+            <div class="form-heading">
+              <p>Add Book</p>
+            </div>
+            <div class="form-title">
+              <label for="title">Title</label>
+              <input type="text" name="title" required />
+            </div>
+            <div class="form-author">
+              <label for="author">Author</label
+              ><input type="text" maxlength="20" name="author" required />
+            </div>
+            <div class="form-pages">
+              <label for="num-pages">Pages</label
+              ><input type="text" name="num-pages" required />
+            </div>
+            <div class="form-read">
+              <input
+                type="checkbox"
+                id="read-checkbox"
+                class="checkbox"
+                name="read"
+              /><label for="read">I've read this</label>
+            </div>
+            <div class="add-book">
+              <button id="submit-button" type="submit">Add Book</button>
+            </div>
+          </form>
+        </div>
+        <ul class="book-container"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
