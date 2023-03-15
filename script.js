@@ -7,22 +7,39 @@ document
 // Javascript library app
 let myLibrary = [];
 
-function Book(title, author, numPages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = numPages;
-  this.read = read;
+class Book {
+  constructor(title, author, numPages, read) {
+    this.title = title;
+    this.author = author;
+    this.numPages = numPages;
+    this.read = read;
+  }
+  toggle() {
+    if (this.read) {
+      this.read = false;
+    } else {
+      this.read = true;
+      return "You've read this book";
+    }
+  }
 }
 
-Book.prototype.toggle = function () {
-  if (this.read) {
-    this.read = false;
-    return "";
-  } else {
-    this.read = true;
-    return "You've read this book";
-  }
-};
+//function Book(title, author, numPages, read) {
+//  this.title = title;
+//  this.author = author;
+//  this.pages = numPages;
+//  this.read = read;
+//}
+//
+//Book.prototype.toggle = function () {
+//  if (this.read) {
+//    this.read = false;
+//    return "";
+//  } else {
+//    this.read = true;
+//    return "You've read this book";
+//  }
+//};
 
 // Adds book to library
 const addBook = function addBooktoLibrary(book) {
@@ -47,7 +64,7 @@ const showBook = function addBooktoDom(book) {
   author.classList.add("book-card-author");
 
   const pages = document.createElement("p");
-  pages.innerText = book.pages + " Pages";
+  pages.innerText = book.numPages + " Pages";
   pages.classList.add("book-card-pages");
 
   const toggleContainer = document.createElement("div");
